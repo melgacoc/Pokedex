@@ -12,6 +12,7 @@ query pokemons{
     }
 `;
 
+
 export const getPokemonByName = gql`
 query pokemon($name: String!){
     pokemon(name: $name){
@@ -32,11 +33,7 @@ query pokemon($name: String!){
 export const getPokemonById = gql`
 query pokemon($id: Int!){
     pokemon(id: $id){
-      name
-      id
-      sprites {
-        front_default
-      }
+
       types {
       type{
         name
@@ -45,3 +42,16 @@ query pokemon($id: Int!){
       }
     }
 `;
+
+export const getPokemonBylimit = gql`
+query pokemons($limit: Int, $offset: Int) {
+    pokemons(limit: $limit, offset: $offset) {
+      results {
+        id
+        name
+        artwork
+      }
+    }
+  }
+`;
+
