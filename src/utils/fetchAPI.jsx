@@ -58,6 +58,7 @@ query pokemon($id: Int!){
 export const getPokemonBylimit = gql`
 query pokemons($limit: Int, $offset: Int) {
     pokemons(limit: $limit, offset: $offset) {
+      count
       results {
         id
         name

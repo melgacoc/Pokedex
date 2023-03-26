@@ -4,9 +4,8 @@
     justify-content: space-between;
     max-width: 100%;
     height: 100%;
-    margin: 0 auto;
-    padding-top: 1%;
-    background-color: #b6b080;
+    margin: 5%;
+    background-color: #ebf4f7;
   }
 
 .pokeCard {
@@ -14,15 +13,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 30%;
-    height: 22%;
+    width: 15%;
+    height: 17%;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin: 1%;
+    margin: 0.5%;
     overflow: hidden;
     text-align: center;
     position: relative;
 }
+
+.pokeCard:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    z-index: 1;
+  }
 
 #toUpperCase {
     text-transform: capitalize;
@@ -57,31 +62,42 @@
 
 .buttonTable {
     width: 100%;
-    height: 2%;
+    height: 8%;
     display: flex;
     justify-content: center;
 }
 
-.pokeCard:hover {
+.button {
+    width: 40%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #3a4244;
+    color: white;
+    font-weight: bold;
+    border: none;
     cursor: pointer;
-    transform: scale(1.1);
-    z-index: 1;
+    margin: 5px;
+}
+
+  .link {
+    text-decoration: none;
+    color: black;
   }
   
   .grass {
-    background-color: #9bcc50;
+    background-color: #d3ff90;
   }
   
   .fire {
-    background-color: #fd7d24;
+    background-color: #fba76b;
   }
   
   .water {
-    background-color: #4592c4;
+    background-color: #8acffd;
   }
   
   .bug {
-    background-color: #729f3f;
+    background-color: #8a9e73;
   }
   
   .normal {
@@ -89,11 +105,11 @@
   }
   
   .poison {
-    background-color: #b97fc9;
+    background-color: #e1a6f1;
   }
   
   .electric {
-    background-color: #eed535;
+    background-color: #f1e48f;
   }
   
   .ground {
@@ -105,27 +121,27 @@
   }
   
   .fighting {
-    background-color: #d56723;
+    background-color: #ae7857;
   }
   
   .psychic {
-    background-color: #f366b9;
+    background-color: #bd76a0;
   }
   
   .rock {
-    background-color: #a38c21;
+    background-color: #a59b70;
   }
   
   .ghost {
-    background-color: #7b62a3;
+    background-color: #9384ad;
   }
   
   .ice {
-    background-color: #51c4e7;
+    background-color: #89c6c6;
   }
   
   .dragon {
-    background-color: #53a4cf;
+    background-color: #65889c;
   }
   
   .steel {

@@ -8,7 +8,10 @@ const PokemonCards = () => {
   
   const [disable, setDisabe] = useState(true);
   const [types, setTypes] = useState({});
-  const [limit, setlimit ] = useState(12);
+  const [limit, setlimit ] = useState(18);
+  // const [favorites, setFavorites] = useState([]);
+  // const [search, setSearch] = useState('');
+
 
   const { loading, error, data } = useQuery(getPokemonBylimit, {
     variables: { limit: limit, offset: 0 },
@@ -24,19 +27,23 @@ const PokemonCards = () => {
     }
     
     const fetchTypes = async () => {
-      const typesObject = {};
+      const typesResponse = {};
       for (const pokemon of data.pokemons.results) {
         const types = await fetchPokemonType(pokemon.name);
-        typesObject[pokemon.name] = types;
+        typesResponse[pokemon.name] = types;
       }
-      setTypes(typesObject);
+      setTypes(typesResponse);
     }
 
     if (data) {
       fetchTypes();
     }
 
-    if(limit === 12){
+    if (limit > 18) {
+      setDisabe(false);
+    }
+
+    if (limit === 18){
       setDisabe(true);
     }
     
@@ -44,13 +51,13 @@ const PokemonCards = () => {
 
   const loadMore = (event) => {
     event.preventDefault();
-    setlimit(limit + 12);
+    setlimit(limit + 18);
     setDisabe(false);
   };
 
   const loadLess = (event) => {
     event.preventDefault();
-    setlimit(limit - 12);
+    setlimit(limit - 18);
   };
 
   const getTypeClass = (types) => {
@@ -98,7 +105,6 @@ const PokemonCards = () => {
     }
     return "";
   };
-  
 
   if (loading) return <p>Wait while we find something cool!</p>;
   if (error) return <p>Error :</p>;
@@ -107,11 +113,12 @@ const PokemonCards = () => {
     <div className="container">
         {data.pokemons.results.map((pokemon) => (
           <div className={`pokeCard ${getTypeClass(types[pokemon.name])}`} types={types[pokemon.name]}>
-             <Link to={`/pokemon/${pokemon.name}`}>
+             <Link to={`/pokemon/${pokemon.name}`}
+             className="link">
                 <div key={pokemon.id}>
                    <h3 className="title"
-                   id="">
-                      {pokemon.id} - {pokemon.name}
+                   id="toUpperCase">
+                      #{pokemon.id} - {pokemon.name}
                    </h3>
                    <img className="pokeImg" src={pokemon.artwork} alt={pokemon.name} />
                    <p>{types[pokemon.name]?.map((
@@ -119,20 +126,17 @@ const PokemonCards = () => {
                     type.slice(1)).join(' / ')}
                    </p>
                  </div>
-                 <button placeholder="fav">
-                    fav
-                 </button>
              </Link>
            </div>
         ))}
       <div className="buttonTable">
-         <button
-         onClick={ loadLess }
+         <button className="button"
+         onClick={(event) => loadLess(event) }
          disabled={ disable }>
             Load Less
          </button>
-         <button
-         onClick={ loadMore }>
+         <button className="button"
+         onClick={(event) => loadMore(event) }>
            Load More
          </button>
       </div>

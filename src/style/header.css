@@ -1,8 +1,9 @@
 .backgroundHeader {
     width: 100%;
     height: 10%;
-    background-color: #2e97b7;
-    border: 1px solid #2e97b7;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ebf4f7;
 }
 
 .titleHeader {
@@ -14,4 +15,12 @@
     text-align: center;
     color: black;
     background-color: #2e97b7;
+}
+
+.logo {
+    width: 50%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

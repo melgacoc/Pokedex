@@ -1,10 +1,12 @@
 import React from "react";
-import '../style/header.css'    
+import '../style/header.css' 
+import logo from '../images/logo.png'   
 
 const Header = () => {
     return (
         <div className="backgroundHeader">
-            <h1 className="titleHeader">Pokédex</h1>
+            <img className="logo"
+            src={ logo } alt="" />
         </div>
     );
 }
