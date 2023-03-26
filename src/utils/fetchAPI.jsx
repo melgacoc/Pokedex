@@ -1,15 +1,23 @@
 import { gql } from '@apollo/client';
 
 export const getPokemons = gql`
-query pokemons{
-    pokemons{
-      results{
-        id
-        name
-        artwork
-      }
+query pokemons($name: String!, $limit: Int, $offset: Int) {
+  pokemons(limit: $limit, offset: $offset) {
+    count
+    next
+    previous
+    results {
+      id
+      name
+      artwork
+      types {
+        type {
+          name
+        }
       }
     }
+  }
+}
 `;
 
 
@@ -32,15 +40,19 @@ query pokemon($name: String!){
 
 export const getPokemonById = gql`
 query pokemon($id: Int!){
-    pokemon(id: $id){
-
-      types {
-      type{
-        name
-      }
-      }
-      }
+  pokemon(id: $id){
+    name
+    id
+    sprites {
+      front_default
     }
+    types {
+    type{
+      name
+    }
+    }
+    }
+  }
 `;
 
 export const getPokemonBylimit = gql`
