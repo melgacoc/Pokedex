@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import PokeTable from '../src/page/pokeTable';
-import PokemonDetailPage from '../src/componenrs/pokeDetails';
+import DetailsPage from "./page/pokeDetails";
 
 const client = new ApolloClient({
   uri: "https://graphql-pokeapi.graphcdn.app/api/graphql",
@@ -19,7 +19,7 @@ const App = () => {
             <PokeTable />
           </Route>
           <Route path="/pokemon/:id">
-            <PokemonDetailPage />
+            <DetailsPage />
           </Route>
         </Switch>
       </Router>

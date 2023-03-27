@@ -4,6 +4,7 @@ import { getPokemonBylimit} from '../utils/fetchAPI';
 import { Link } from 'react-router-dom';
 import '../style/pokeCard.css'
 
+
 const PokemonCards = () => {
   
   const [disable, setDisabe] = useState(true);
@@ -114,7 +115,8 @@ const PokemonCards = () => {
         {data.pokemons.results.map((pokemon) => (
           <div className={`pokeCard ${getTypeClass(types[pokemon.name])}`} types={types[pokemon.name]}>
              <Link to={`/pokemon/${pokemon.name}`}
-             className="link">
+             className="link"
+             artwork={ pokemon.artwork }>
                 <div key={pokemon.id}>
                    <h3 className="title"
                    id="toUpperCase">

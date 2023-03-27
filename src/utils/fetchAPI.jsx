@@ -26,6 +26,14 @@ query pokemon($name: String!){
     pokemon(name: $name){
       name
       id
+      height 
+      weight
+      abilities{
+        ability{
+          name
+          url
+        }
+      }
       sprites {
         front_default
       }

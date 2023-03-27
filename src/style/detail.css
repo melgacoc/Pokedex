@@ -1,0 +1,62 @@
+.containerDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ebf4f7;
+  }
+  
+  .card {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .pokeName {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+  }
+  
+  .pokeImage {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .pokeTypes {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+  }
+  
+  .pokeStats {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .pokeStats p {
+    margin-right: 20px;
+  }
+  
+  .pokeAbilities {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .types {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+  }
