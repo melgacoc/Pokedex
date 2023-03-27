@@ -22,4 +22,9 @@ Install the dependencies: `npm install`
 
 To run the application: `npm start`
 
-To generate a test coverage report: `npm run coverage`
+To generate a test coverage report: `npm run test:coverage`
+
+## Try out here
+
+https://main--melgaco-pokepai.netlify.app/
+
