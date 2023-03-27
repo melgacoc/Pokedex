@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { getPokemonByName } from "../utils/fetchAPI";
 import "../style/detail.css";
+import isLoading from "./loading";
 
 const PokemonDetails = () => {
   const { id } = useParams();
@@ -32,8 +33,8 @@ const PokemonDetails = () => {
 
   
 
-  if (loading) return <p>Wait while we find something cool!</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (loading) return isLoading();
+  if (error) return Error();
 
   const { name, sprites, types } = data.pokemon;
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import { waitForElement, screen } from '@testing-library/react';
+import { waitForElement } from '@testing-library/react';
 import renderWithRouter from './renderWithRouter';
 import userEvent from '@testing-library/user-event';
-import PokemonCards from './PokemonCards';
+import PokemonCards from '../componenrs/pokeCard';
 
 
 describe('Tests for PokemonCards component', () => {

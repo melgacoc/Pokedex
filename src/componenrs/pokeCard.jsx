@@ -3,6 +3,8 @@ import { useQuery } from "@apollo/client";
 import { getPokemonBylimit} from '../utils/fetchAPI';
 import { Link } from 'react-router-dom';
 import '../style/pokeCard.css'
+import isLoading from "./loading";
+import Error from "./erro";
 
 
 const PokemonCards = () => {
@@ -107,8 +109,8 @@ const PokemonCards = () => {
     return "";
   };
 
-  if (loading) return <p>Wait while we find something cool!</p>;
-  if (error) return <p>Error :</p>;
+  if (loading) return isLoading();
+  if (error) return Error();
         
   return (
     <div className="container">
