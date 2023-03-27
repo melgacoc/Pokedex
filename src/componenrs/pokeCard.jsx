@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import '../style/pokeCard.css';
 import isLoading from "./loading";
 import Error from "./erro";
+import { getTypeClass } from "../utils/functions";
 
 const PokemonCards = () => {
   
@@ -62,59 +63,15 @@ const PokemonCards = () => {
     setlimit(limit - 18);
   };
 
-  const getTypeClass = (types) => {
-    if (types) {
-      switch (types[0]) {
-        case "normal":
-          return "normal";
-        case "fighting":
-          return "fighting";
-        case "flying":
-          return "flying";
-        case "poison":
-          return "poison";
-        case "ground":
-          return "ground";
-        case "rock":
-          return "rock";
-        case "bug":
-          return "bug";
-        case "ghost":
-          return "ghost";
-        case "steel":
-          return "steel";
-        case "fire":
-          return "fire";
-        case "water":
-          return "water";
-        case "grass":
-          return "grass";
-        case "electric":
-          return "electric";
-        case "psychic":
-          return "psychic";
-        case "ice":
-          return "ice";
-        case "dragon":
-          return "dragon";
-        case "dark":
-          return "dark";
-        case "fairy":
-          return "fairy";
-        default:
-          return "";
-      }
-    }
-    return "";
-  };
-
   if (loading) return isLoading();
   if (error) return Error();
         
   return (
     <div className="container">
         {data.pokemons.results.map((pokemon) => (
-          <div className={`pokeCard ${getTypeClass(types[pokemon.name])}`} types={types[pokemon.name]}>
+          <div className={`pokeCard
+          ${getTypeClass(types[pokemon.name])}`}
+          types={types[pokemon.name]}>
              <Link to={`/pokemon/${pokemon.name}`}
              className="link"
              artwork={ pokemon.artwork }>
@@ -125,8 +82,8 @@ const PokemonCards = () => {
                    </h3>
                    <img className="pokeImg" src={pokemon.artwork} alt={pokemon.name} />
                    <p>{types[pokemon.name]?.map((
-                    type) => type.charAt(0).toUpperCase() +
-                    type.slice(1)).join(' / ')}
+                      type) => type.charAt(0).toUpperCase() +
+                      type.slice(1)).join(' / ')}
                    </p>
                  </div>
              </Link>

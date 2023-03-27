@@ -9,8 +9,8 @@ const Footer = () => {
         <div>
 
         <p>Created by: </p>
-        <p>
-          <a href="https://github.com/melgacoc/pokedex">© 2023 PokeApp</a>
+        <p className="footerText">
+          <a href="https://github.com/melgacoc/pokedex">Cláudio Melgaço</a>
         </p>
         </div>
         <img className="footerPokeball" src={ emptyBall } alt="pokeball"/>
