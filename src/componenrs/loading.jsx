@@ -1,13 +1,15 @@
 import React from "react";
 import pikachu from '../images/pikachu.png';
+import '../style/loading.css';
 
 const isLoading = () => {
     return (
-        <div>
-            <h1>
+        <div className="loadingContainer">
+            <h1 className="loadingText">
             Wait while we find something cool!
             </h1>
-            <img src={ pikachu } alt="" />
+            <img className="loadingImage"
+            src={ pikachu } alt="" />
         </div>
     )
 }

@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import { getPokemonBylimit} from '../utils/fetchAPI';
 import { Link } from 'react-router-dom';
-import '../style/pokeCard.css'
+import '../style/pokeCard.css';
 import isLoading from "./loading";
 import Error from "./erro";
-
 
 const PokemonCards = () => {
   
@@ -134,12 +133,16 @@ const PokemonCards = () => {
            </div>
         ))}
       <div className="buttonTable">
-         <button className="button"
+         <button
+         type="button" 
+         className="button"
          onClick={(event) => loadLess(event) }
          disabled={ disable }>
             Load Less
          </button>
-         <button className="button"
+         <button
+         type="button"
+         className="button"
          onClick={(event) => loadMore(event) }>
            Load More
          </button>

@@ -4,6 +4,7 @@ import { useQuery } from "@apollo/client";
 import { getPokemonByName } from "../utils/fetchAPI";
 import "../style/detail.css";
 import isLoading from "./loading";
+import Error from './erro';
 
 const PokemonDetails = () => {
   const { id } = useParams();

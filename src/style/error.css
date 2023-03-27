@@ -1,8 +1,17 @@
 .sadPikachu {
-    width: 10%;
-    height: 10%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    width: 50%;
+    height: 50%;
+}
+
+.errorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.errorText {
+    display: flex;
+    justify-content: center;
 }

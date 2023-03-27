@@ -1,10 +1,11 @@
 import React from "react";
 import sadPikachu from '../images/sadPikachu.png';
+import '../style/error.css'
 
 const Error = () => {
     return (
-        <div>
-            <h1>
+        <div className="errorContainer">
+            <h1 className="errorText">
             Something went wrong!
             </h1>
             <img className="sadPikachu"

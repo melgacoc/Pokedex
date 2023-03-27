@@ -1,0 +1,13 @@
+.loadingImage {
+    height: 30%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    padding-left: 35%;
+}
+
+.loadingText {
+    display: flex;
+    justify-content: center;
+}
+
