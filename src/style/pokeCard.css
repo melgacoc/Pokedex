@@ -8,7 +8,7 @@
     background-color: #ebf4f7;
   }
 
-.pokeCard {
+  .pokeCard {
     display: inline-block;
     flex-direction: column;
     align-items: center;
@@ -21,6 +21,9 @@
     overflow: hidden;
     text-align: center;
     position: relative;
+    border-width: 0,2%;
+    border-style: solid;
+  
 }
 
 .pokeCard:hover {
@@ -85,70 +88,87 @@
   }
   
   .grass {
+    border-image: linear-gradient(to right, #8BC34A, #4CAF50) 1;
     background-color: #d3ff90;
   }
   
   .fire {
     background-color: #fba76b;
+    border-image: linear-gradient(to right, #FFB74D, #FF9800) 1;
   }
   
   .water {
     background-color: #8acffd;
-  }
-  
-  .bug {
-    background-color: #8a9e73;
+    border-image: linear-gradient(to right, #4FC3F7, #29B6F6) 1;
   }
   
   .normal {
     background-color: #a4acaf;
+    border-image: linear-gradient(to right, #CFD8DC, #B0BEC5) 1;
   }
   
   .poison {
     background-color: #e1a6f1;
+    border-image: linear-gradient(to right, #CE93D8, #BA68C8) 1;
   }
   
   .electric {
     background-color: #f1e48f;
+    border-image: linear-gradient(to right, #FFF176, #FFEB3B) 1;
   }
   
   .ground {
     background-color: #ab9842;
+    border-image: linear-gradient(to right, #D7CCC8, #BCAAA4) 1;
+  }
+  
+  .bug {
+    background-color: #8a9e73;
+    border-image: linear-gradient(to right, #C5E1A5, #AED581) 1;
   }
   
   .fairy {
     background-color: #fdb9e9;
+    border-image: linear-gradient(to right, #F8BBD0, #F48FB1) 1;
   }
   
   .fighting {
     background-color: #ae7857;
+    border-image: linear-gradient(to right, #BCAAA4, #A1887F) 1;
   }
   
   .psychic {
     background-color: #bd76a0;
+    border-image: linear-gradient(to right, #F48FB1, #E91E63) 1;
   }
   
   .rock {
     background-color: #a59b70;
+    border-image: linear-gradient(to right, #BCAAA4, #8D6E63) 1;
   }
   
   .ghost {
     background-color: #9384ad;
+    border-image: linear-gradient(to right, #B39DDB, #9B59B6) 1;
   }
   
   .ice {
     background-color: #89c6c6;
+    border-image: linear-gradient(to right, #80DEEA, #00BCD4) 1;
   }
   
   .dragon {
     background-color: #65889c;
+    border-image: linear-gradient(to right, #90CAF9, #2196F3) 1;
   }
   
   .steel {
     background-color: #9eb7b8;
+    border-image: linear-gradient(to right, #B0BEC5, #78909C) 1;
   }
   
   .dark {
     background-color: #707070;
+    border-image: linear-gradient(to right, #BDBDBD, #616161) 1;
   }
   

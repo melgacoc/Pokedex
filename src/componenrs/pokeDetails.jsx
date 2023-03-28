@@ -5,6 +5,8 @@ import { getPokemonByName } from "../utils/fetchAPI";
 import "../style/detail.css";
 import isLoading from "./loading";
 import Error from './erro';
+import { Link } from 'react-router-dom';
+
 
 const PokemonDetails = () => {
   const { id } = useParams();
@@ -41,6 +43,9 @@ const PokemonDetails = () => {
 
   return (
     <div className="containerDetails">
+        <Link to="/" className="backButton">
+          Go Back
+        </Link>
       <div className="card">
         <div className="cardContent">
           <h1 className="pokeName">{name}</h1>

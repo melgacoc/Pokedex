@@ -17,8 +17,9 @@ describe('Tests for PokemonDetails component', () => {
         const { pathname } = history.location;
         expect(pathname).toBe('/pokemons/1');
     
-        await waitForElement(() => screen.getByText('Abilities'));});
+        await waitForElement(() => screen.getByText('Abilities'));
         expect(queryByText('Abilities')).toBeTruthy();
         expect(queryByText('Overgrow')).toBeTruthy();
         expect(queryByText('Chlorophyll')).toBeTruthy();
+    });
 });
