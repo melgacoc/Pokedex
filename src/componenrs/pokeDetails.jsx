@@ -17,6 +17,9 @@ const PokemonDetails = () => {
   });
 
   useEffect(() => {
+
+    document.title = 'Pokedex';
+
     const getAbilityDescriptions = async () => {
       const descriptions = {};
       for (const ability of data.pokemon.abilities) {
